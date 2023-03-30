@@ -12,6 +12,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
+      - name: Add Github credentials
+        uses: oleksiyrudenko/gha-git-credentials@v2.1.1
+        with:
+          global: true
+          name: "devgeko"
+          email: "dev.aili.fida.ac@gmail.com"
       - name: Build and Deploy React app to GitHub Pages
         uses: omkartapale/react-deployment-gh-pages@v1.0.0
