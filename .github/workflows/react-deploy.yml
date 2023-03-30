@@ -26,14 +26,16 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+      - name: Serve app
+        run: npm run dev
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{steps.deployment.outputs.page_url}}
-    steps:
-      - name: Deploy to github Pages
-        id: deployment
-        uses: actions/deploy-pages@v1
+  # deploy:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   environment:
+  #     name: github-pages
+  #     url: ${{steps.deployment.outputs.page_url}}
+  #   steps:
+  #     - name: Deploy to github Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v1
