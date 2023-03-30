@@ -35,6 +35,7 @@ jobs:
         with:
           branch: gh-pages
           folder: dist
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 # jobs:
 #   build:
 #     runs-on: ubuntu-latest
