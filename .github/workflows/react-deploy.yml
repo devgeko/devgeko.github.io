@@ -26,4 +26,4 @@ jobs:
       - name: Build
         run: npm run build
       - name: Deploy to Github Pages
-        run: npm deploy
+        run: npm run deploy
